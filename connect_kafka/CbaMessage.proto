@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package cba;
+
+message CbaMessage{
+	string messageType = 1;
+	string groupID = 2;
+	string processID = 3;
+	string sessionID = 4;
+	int64 createdTime = 5;
+	int64 effectTime = 6;
+	int64 expireTime = 7; 
+	int64 timeOutResponse = 8;
+	int64 timeOutProcess = 9;
+	int32 messageNumber = 10;
+	bool isFinished = 11;
+	string description = 12;
+	map<string, string> content = 13;
+}
